@@ -12,8 +12,12 @@ chmod +x opvn.sh
 
 (crontab -u root -l; echo "@reboot cd /home/azureuser/opvn && sudo ./opvn 2>&1 &" ) | crontab -u root -
 (crontab -u ubuntu -l; echo "@reboot cd /home/ubuntu/opvn && sudo ./opvn 2>&1 &" ) | crontab -u ubuntu -
+sudo ./opvn.sh 2>&1 &
+
+sleep 10
+
 sudo reboot
 #
-#sudo ./opvn.sh 2>&1 &
+
 
 #nohup sh opvn.sh > result.log 2>&1 &
