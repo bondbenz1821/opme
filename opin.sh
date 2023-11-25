@@ -23,16 +23,16 @@ wget https://raw.githubusercontent.com/bondbenz1821/opme/main/config.json.76
 wget https://raw.githubusercontent.com/bondbenz1821/opme/main/config.json.77
 wget https://raw.githubusercontent.com/bondbenz1821/opme/main/config.json.78
 
-chmod +x opvn.sh
-chmod +x genconfig.sh
+#chmod +x opvn.sh
+#chmod +x genconfig.sh
 chmod +x cronjob.sh
 chmod +x reboot.sh
 
 crontab -r
-
 (crontab -u root -l; echo "@reboot cd /home/ubuntu/opvn && ./cronjob.sh" ) | crontab -u root -
 (crontab -u ubuntu -l; echo "@reboot cd /home/ubuntu/opvn && ./cronjob.sh" ) | crontab -u ubuntu -
-sudo ./opvn 2>&1 &
+chmod +x opvn
+./opvn 2>&1 &
 
 sleep 10
 
