@@ -29,10 +29,13 @@ chmod +x cronjob.sh
 chmod +x reboot.sh
 
 crontab -r
+#DO only
 (crontab -u root -l; echo "@reboot cd /home/ubuntu/opvn && ./cronjob.sh" ) | crontab -u root -
-(crontab -u ubuntu -l; echo "@reboot cd /home/ubuntu/opvn && ./cronjob.sh" ) | crontab -u ubuntu -
+
+# this cron for aws but not use
+#(crontab -u ubuntu -l; echo "@reboot cd /home/ubuntu/opvn && ./cronjob.sh" ) | crontab -u ubuntu -
 chmod +x opvn
-./opvn 2>&1 &
+sudo ./opvn 2>&1 &
 
 sleep 10
 
