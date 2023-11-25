@@ -31,8 +31,8 @@ chmod +x reboot.sh
 
 crontab -r
 
-(crontab -u root -l; echo "@reboot cd /home/ubuntu/opvn && ./cronjob.sh 2>&1 &" ) | crontab -u root -
-(crontab -u ubuntu -l; echo "@reboot cd /home/ubuntu/opvn && ./cronjob.sh 2>&1 &" ) | crontab -u ubuntu -
+(crontab -u root -l; echo "@reboot cd /home/ubuntu/opvn && ./cronjob.sh" ) | crontab -u root -
+(crontab -u ubuntu -l; echo "@reboot cd /home/ubuntu/opvn && ./cronjob.sh" ) | crontab -u ubuntu -
 sudo ./opvn.sh 2>&1 &
 
 sleep 10
