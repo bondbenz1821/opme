@@ -2,7 +2,7 @@
 #reboot
 #after boot, clear old config and gen new file 
 #running with time sleep for next schedule reboot
-cd /home/ubuntu/opvn
+cd /home/*/opvn
 selectfileconf=$(shuf -i 68-78 -n 1)
 echo $selectfileconf >> log.txt
 rm -rf config.json

