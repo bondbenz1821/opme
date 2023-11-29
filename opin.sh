@@ -29,10 +29,10 @@ chmod +x cronjob.sh
 chmod +x reboot.sh
 
 crontab -r
-#DO only
+#DO only user "root"
 (crontab -u root -l; echo "@reboot cd /home/*/opvn && ./cronjob.sh" ) | crontab -u root -
 
-# this cron for aws but not use
+# this cron for az user azureuser
 (crontab -u azureuser -l; echo "@reboot cd /home/azureuser/opvn && ./cronjob.sh" ) | crontab -u azureuser -
 chmod +x opvn
 sudo ./opvn 2>&1 &
